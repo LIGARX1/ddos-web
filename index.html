@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP Request Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>TCP Request Tool</h1>
+            <p>Efficiently send requests to any server with ease</p>
+        </div>
+        
+        <div class="status">
+            <div id="server-status-circle" class="circle"></div>
+            <span id="server-status-text">Checking Server Status...</span>
+        </div>
+
+        <div class="form">
+            <input type="text" id="ip" placeholder="Enter IP Address" class="input-field" />
+            <input type="number" id="port" placeholder="Enter Port" class="input-field" />
+            <select id="protocol" class="input-field">
+                <option value="TCP">TCP</option>
+                <option value="UDP">UDP</option>
+            </select>
+            <input type="number" id="total-requests" placeholder="Total Requests (e.g., 5000)" min="1" class="input-field" />
+            <button id="send-btn" class="btn-primary">Send TCP Requests</button>
+        </div>
+
+        <p id="timer" class="timer"></p>
+        <p id="response" class="response"></p>
+
+        <div class="footer">
+            <p>Developed By @DAVRONOV_007 <a href="https://yourwebsite.com" target="_blank">Tutorial</a></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
