@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Route to serve the form page (HTML)
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_templates('index.html')
 
 # Asynchronous function to send TCP requests
 async def send_tcp_request(ip, port):
